@@ -20,7 +20,13 @@ module.exports = {
       },
     ],
   },
-  plugins: [htmlWebpackPlugin, new LodashModuleReplacementPlugin()],
+  plugins: [
+    htmlWebpackPlugin,
+    new LodashModuleReplacementPlugin({
+      collections: true,
+      paths: true,
+    }),
+  ],
   devServer: {
     historyApiFallback: true,
     hot: true,

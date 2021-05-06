@@ -14,6 +14,15 @@ _.includes('/a/b/c', '/a')
 // => true
 ```
 
+I add some options to fix it,and refer to [lodash-webpack-plugin](https://github.com/lodash/lodash-webpack-plugin#usage)
+
+```
+new LodashModuleReplacementPlugin({
+  'collections': true,
+  'paths': true
+});
+```
+
 run this project
 
 ```
